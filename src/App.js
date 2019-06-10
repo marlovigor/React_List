@@ -45,7 +45,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-      <h1>Persomal Info</h1>
+      <h1>Personal Info</h1>
         <form style={form}>
           <input
             style={inputstyle1}
