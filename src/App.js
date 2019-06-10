@@ -15,7 +15,7 @@ class App extends React.Component {
       isLactosFree: false,
 
 
-    
+
     }
 
 
@@ -26,15 +26,15 @@ class App extends React.Component {
   }
 
   handleChange(event) {
-    const { name, value,type,checked } = event.target
-    type==="checkbox" ?
-    this.setState({
-        [name]:checked    
-    })
-    :
-    this.setState({
-      [name]: value
-    })
+    const { name, value, type, checked } = event.target
+    type === "checkbox" ?
+      this.setState({
+        [name]: checked
+      })
+      :
+      this.setState({
+        [name]: value
+      })
 
 
   }
@@ -45,8 +45,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <form >
+      <h1>Persomal Info</h1>
+        <form style={form}>
           <input
+            style={inputstyle1}
             name="firstName"
             value={this.state.firstName}
             onChange={this.handleChange}
@@ -55,13 +57,15 @@ class App extends React.Component {
           />
           <br />
           <input
+            style={inputstyle1}
             name="lastName"
             placeholder="last name"
             value={this.state.lastName}
             onChange={this.handleChange} />
           <br />
           <input
-          name="age"
+            name="age"
+            style={inputstyle1}
             placeholder="age"
             value={this.state.age}
             onChange={this.handleChange} />
@@ -69,66 +73,61 @@ class App extends React.Component {
           <br />
           <label>
             <input type="radio"
-            name="gender"
-            value="male"
-            checked={this.state.gender === "male"}
-            onChange={this.handleChange}
+              name="gender"
+              value="male"
+              checked={this.state.gender === "male"}
+              onChange={this.handleChange}
             />Male
           </label>
           <label>
             <input type="radio"
-            name="gender"
-            value="female"
-            checked={this.state.gender === "female"}
-            onChange={this.handleChange}
+              name="gender"
+              value="female"
+              checked={this.state.gender === "female"}
+              onChange={this.handleChange}
             />female
           </label>
-           <br/>
+          <br />
 
-          <select 
-          value={this.state.destination} 
-          name="destination" 
-          onChange={this.handleChange} placeholder="choose destination">
+          <select
+            value={this.state.destination}
+            name="destination"
+            onChange={this.handleChange} placeholder="choose destination">
             <option value="--Choose--">--Choose--</option>
             <option value="gernmany">Germany</option>
             <option value="Hawaii">Hawaii</option>
             <option value="Japan">Japan</option>
             <option value="Africa">Africa</option>
-            
+
           </select>
           <br />
-          
+
           <label>
             <input
-            type="checkbox"
-            name="isVegan"
-            onChange={this.handleChange}
-            checked={this.state.isVegan}
-            />Vegan
+              type="checkbox"
+              name="isVegan"
+              onChange={this.handleChange}
+              checked={this.state.isVegan}
+            />Vegan            
             <input
-            type="checkbox"
-            name="isKosher"
-            onChange={this.handleChange}
-            checked={this.state.iskosher}
+              type="checkbox"
+              name="isKosher"
+              onChange={this.handleChange}
+              checked={this.state.iskosher}
             />Kosher
             <input
-            type="checkbox"
-            name="isLactosFree"
-            onChange={this.handleChange}
-            checked={this.state.isLactosFree}
+              type="checkbox"
+              name="isLactosFree"
+              onChange={this.handleChange}
+              checked={this.state.isLactosFree}
             />lactos
-            <input
-            type="checkbox"
-            name="isKosher"
-            onChange={this.handleChange}
-            checked={this.state.iskosher}
-            />Kosher
+
           </label>
 
 
           <br />
 
-          
+
           <button>SUBMIT</button>
         </form>
 
@@ -140,23 +139,36 @@ class App extends React.Component {
         <p>your destination:{this.state.destination}</p>
 
         <p>
-          your Dietary Restriction:<br/>
+          your Dietary Restriction:<br />
           Vegan:{this.state.isVegan ? "yes" : "no"}
-          <br/>
+          <br />
           Kosher:{this.state.isKosher ? "yes" : "no"}
-          <br/>
+          <br />
           lactos:{this.state.isLactosFree ? "yes" : "no"}
-       </p>
+        </p>
       </div>
-
-
-
-
-
-
 
     );
   }
 }
+
+const form = {
+  paddingTop: "20px",
+  backgroundColor: 'rgba(108, 190, 237, 1)',
+
+
+}
+const inputstyle1 = {
+  width: '30%',
+  height: '35px',
+  borderRadius:'15px',
+  margin:'5px',
+}
+
+
+
+
+
+
 
 export default App;
