@@ -113,8 +113,7 @@ function Formcon (props){
 }
 const form = {
     paddingTop: "20px",
-    backgroundColor: 'rgba(108, 190, 237, 1)',
-  
+    backgroundColor:'lightblue'
   
   }
   const inputstyle1 = {

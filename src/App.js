@@ -3,18 +3,22 @@ import './App.css';
 import Form from './Components/Form'
 
 
-function App() {
-  return(
-    <div className="homediv">
+class App extends React.Component{
+ render(){
+   return(
+    <div style={homediv}>
     <Form />
     </div>
   )
-  
+   }
+ 
 }
+
 const homediv={
-  backgroundColor:'black',
-  height:'100px'
+  backgroundColor:'blue',
+
 }
+
 
 
 

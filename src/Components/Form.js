@@ -51,18 +51,6 @@ class Form extends React.Component {
   }
 }
 
-const form = {
-  paddingTop: "20px",
-  backgroundColor: 'rgba(108, 190, 237, 1)',
-
-
-}
-const inputstyle1 = {
-  width: '30%',
-  height: '35px',
-  borderRadius:'15px',
-  margin:'5px',
-}
 
 
 
