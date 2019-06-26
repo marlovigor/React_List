@@ -112,7 +112,7 @@ function Formcon (props){
       );
 }
 const form = {
-    paddingTop: "20px",
+    paddingTop: "0px",
     backgroundColor:'lightblue'
   
   }
